@@ -28,38 +28,6 @@ export default function PostList() {
     setPostName("");
     setPostDescription("");
   };
-
-  var human = [
-    { id: 1, name: "A", gender: "nam" },
-    { id: 2, name: "B", gender: "nữ" },
-    { id: 3, name: "C", gender: "nữ" },
-    { id: 4, name: "D", gender: "nữ" },
-  ];
-
-  //   output
-  // {human: "B2", gender: "nữ"}
-  // {human: "C3", gender: "nữ"}
-  // {human: "D4", gender: "nữ"}
-
-  function displayOutput(human: any, gender: string) {
-    let result: any = [];
-
-    var filteredGender = human.filter(
-      (person: any) => person.gender === gender
-    );
-
-    filteredGender.forEach((person: any) => {
-      result.push({
-        human: `${person.name}${person.id}`,
-        gender: person.gender,
-      });
-    });
-
-    return result;
-  }
-
-  console.log(displayOutput(human, "nữ"));
-
   return (
     <div className="flex justify-center">
       <div className="w-1/2 flex justify-center">
